@@ -1,0 +1,960 @@
+{
+    "key": "group_65b94aebc9f6a",
+    "title": "Custom Page Template",
+    "fields": [
+        {
+            "key": "field_65c27ca521f43",
+            "label": "Header",
+            "name": "header",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_65c3c8e80ca67",
+                    "label": "Add Header?",
+                    "name": "add_header",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "yes": "Yes",
+                        "no": "No"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_65c27d1348215",
+                    "label": "BG Type",
+                    "name": "bg_type",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65c3c8e80ca67",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "color": "Color",
+                        "gradient": "Gradient",
+                        "image": "Image"
+                    },
+                    "default_value": "",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_65c27d4548216",
+                    "label": "BG Color",
+                    "name": "bg_color",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65c27d1348215",
+                                "operator": "==",
+                                "value": "color"
+                            },
+                            {
+                                "field": "field_65c3c8e80ca67",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_65c27d1348215",
+                                "operator": "==",
+                                "value": "gradient"
+                            },
+                            {
+                                "field": "field_65c3c8e80ca67",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_65c27d9348218",
+                    "label": "BG Color 2",
+                    "name": "bg_color_2",
+                    "aria-label": "",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65c27d1348215",
+                                "operator": "==",
+                                "value": "gradient"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "enable_opacity": 1,
+                    "return_format": "string"
+                },
+                {
+                    "key": "field_65c27db448219",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65c27d1348215",
+                                "operator": "==",
+                                "value": "image"
+                            },
+                            {
+                                "field": "field_65c3c8e80ca67",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_65c3c8440ca65",
+                    "label": "Text Color",
+                    "name": "text_color",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65c3c8e80ca67",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "black": "Black",
+                        "white": "White"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_65c29d1e4d1d4",
+                    "label": "Header Description",
+                    "name": "header_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65c3c8e80ca67",
+                                "operator": "==",
+                                "value": "yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_65b94aecb5be6",
+            "label": "Content Layouts",
+            "name": "layouts",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65b94b52b5be7",
+                    "label": "Header",
+                    "name": "header",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65b94aecb5be6"
+                },
+                {
+                    "key": "field_65b94b7eb5be9",
+                    "label": "Type",
+                    "name": "type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Choose the post type used in query",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "post": "Posts",
+                        "videos": "Videos",
+                        "tracker": "Trackers",
+                        "study": "Studies",
+                        "html": "Custom HTML"
+                    },
+                    "default_value": "Posts",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_65b94aecb5be6"
+                },
+                {
+                    "key": "field_65b94e96b5bea",
+                    "label": "Tag",
+                    "name": "tag",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65b94b7eb5be9",
+                                "operator": "==",
+                                "value": "post"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Insert tag to search in query",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65b94aecb5be6"
+                },
+                {
+                    "key": "field_65b94f56b5beb",
+                    "label": "Video ID",
+                    "name": "video_id",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65b94b7eb5be9",
+                                "operator": "==",
+                                "value": "videos"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Insert video id",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65b94aecb5be6"
+                },
+                {
+                    "key": "field_65b94f99b5bec",
+                    "label": "Study Category",
+                    "name": "category",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65b94b7eb5be9",
+                                "operator": "==",
+                                "value": "study"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": null,
+                        "100-innovations": "100 Innovations",
+                        "aml": "AML",
+                        "antitrust": "ANTITRUST",
+                        "api": "API",
+                        "accounts-payable": "Accounts Payable",
+                        "accounts-receivable": "Accounts Receivable",
+                        "acquiring": "Acquiring",
+                        "acquisitions": "Acquisitions",
+                        "active-register": "Active Register",
+                        "active-study": "Active Study",
+                        "active-tracker": "Active Tracker",
+                        "africa": "Africa",
+                        "aggregators": "Aggregators",
+                        "amazon-alexa": "Alexa",
+                        "alexa-voice-challenge": "Alexa Voice Challenge",
+                        "alternative-credit": "Alternative Credit",
+                        "alternative-financial-services": "Alternative Finances",
+                        "amazon": "Amazon",
+                        "amazon-acquisitions": "Amazon Acquisitions",
+                        "amazon-commerce": "Amazon Commerce",
+                        "amazon-delivery": "Amazon Delivery",
+                        "amazon-entertainment": "Amazon Entertainment",
+                        "amazon-innovations": "Amazon Innovations",
+                        "amazon-investments": "Amazon Investments",
+                        "amazon-loyalty": "Amazon Loyalty",
+                        "amazon-payments": "Amazon Payments",
+                        "amazon-profile": "Amazon Profile",
+                        "amazon-technology": "Amazon Technology",
+                        "analytics": "Analytics",
+                        "android-pay": "Android Pay",
+                        "apple": "Apple",
+                        "apple-pay-tracker": "Apple Pay",
+                        "april-fools-2019": "April Fools 2019",
+                        "artificial-intelligence": "Artificial Intelligence",
+                        "authentication": "Authentication",
+                        "automated-retail": "Automated Retail",
+                        "b2b-payments": "B2B Payments",
+                        "bnpl": "BNPL",
+                        "back-office": "Back-office",
+                        "bank-regulation": "Bank Regulation",
+                        "banking": "Banking",
+                        "big-data": "Big Data",
+                        "big-tech": "Big Tech",
+                        "biometrics": "Biometrics",
+                        "bitcoin-tracker": "Bitcoin",
+                        "bitcoin": "Bitcoin",
+                        "blockchain": "Blockchain",
+                        "blockchain-distributed-ledger": "Blockchain \/ Distributed Ledger",
+                        "bluesnap": "BlueSnap",
+                        "bluesnap-executive-bio": "BlueSnap",
+                        "boomers-vs-millennials": "Boomers vs. Millennials",
+                        "breach-round-up": "Breach Round Up",
+                        "breakthrough-series": "Breakthrough Series",
+                        "brexit": "Brexit",
+                        "business": "Business",
+                        "business-wire": "Business Wire",
+                        "buy-now-pay-later": "Buy Now Pay Later",
+                        "ca": "CA Technologies",
+                        "cbdc": "CBDC",
+                        "ceo-series": "CEO Series",
+                        "ces": "CES",
+                        "cfo": "CFO",
+                        "cfpb": "CFPB",
+                        "csi": "CSI",
+                        "cash": "Cash",
+                        "cash-is-king": "Cash is King",
+                        "chatbot-tracker": "Chatbots",
+                        "chatbots-and-commerce": "Chatbots And Commerce",
+                        "checkout-conversion": "Checkout Conversion",
+                        "cloud-banking": "Cloud Banking",
+                        "commentary": "Commentary",
+                        "commerce": "Commerce",
+                        "commerce-connected": "Commerce Connected",
+                        "commercial-payments": "Commercial Payments",
+                        "company-profile": "Company Profile",
+                        "company-spotlight": "Company Spotlight",
+                        "connectedeconomy": "Connected Economy",
+                        "consumer-authentication": "Consumer Authentication",
+                        "consumer-finance": "Consumer Finance",
+                        "consumer-insights": "Consumer Insights",
+                        "consumer-payments": "Consumer Payments",
+                        "consumer-payments-2": "Consumer Payments",
+                        "controversial": "Controversial",
+                        "cool": "Cool",
+                        "coronavirus": "Coronavirus",
+                        "coupon-apps": "Coupon Apps",
+                        "credit-cards": "Credit Cards",
+                        "credit-unions": "Credit Unions",
+                        "creditcall": "Creditcall",
+                        "cross-border-payments": "Cross-border Payments",
+                        "cross-border-commerce": "Cross Border Commerce",
+                        "crypto-wallet": "Crypto Wallet",
+                        "cryptocurrency": "Cryptocurrency",
+                        "cybersecurity": "Cybersecurity",
+                        "daily2cnts": "DAILY2CNTS",
+                        "daily-data-dive": "Daily Data Dive",
+                        "data": "Data",
+                        "data-dive": "Data Dive",
+                        "data-drivers": "Data Drivers",
+                        "david-s-evans": "David S. Evans",
+                        "debt": "Debt",
+                        "delivery": "Delivery",
+                        "developer-lab": "Developer Lab Series",
+                        "digital-first-banking": "Digital-First Banking",
+                        "digital-banking": "Digital Banking",
+                        "digital-identity": "Digital Identity",
+                        "digital-onboarding": "Digital Onboarding",
+                        "digital-payments": "Digital Payments",
+                        "disbursements": "Disbursements",
+                        "discover": "Discover",
+                        "emea-60": "EMEA 60",
+                        "emv": "EMV",
+                        "evo-payments-international": "EVO Payments International",
+                        "earnings": "Earnings",
+                        "economy": "Economy",
+                        "ecosystems": "Ecosystems",
+                        "entrust-datacard": "Entrust Datacard",
+                        "europe": "Europe",
+                        "europe-3": "Europe",
+                        "events": "Events",
+                        "exclusive-series": "Exclusive Series",
+                        "executive-bio": "Executive Bio",
+                        "executive-insights": "Executive Insights",
+                        "facebook": "Facebook",
+                        "faster-payments": "Faster Payments",
+                        "featured-stories56": "Featured Stories",
+                        "featured-stories24": "Featured Stories",
+                        "financial-inclusion": "Financial Inclusion",
+                        "financial-inclusion-3": "Financial Inclusion",
+                        "fintech-investments": "Fintech Investments",
+                        "fitness": "Fitness",
+                        "fraud-attack": "Fraud Attack",
+                        "fraud-prevention": "Fraud Prevention",
+                        "gas-station-retail": "Gas Station Retail",
+                        "gift-cards": "Gift Cards",
+                        "gig-economy": "Gig Economy",
+                        "global-citizen": "Global Citizen",
+                        "global-payments": "Global Payments",
+                        "google": "Google",
+                        "healthcare": "Healthcare",
+                        "healthcare-financing": "Healthcare Financing",
+                        "hmmm": "Hmmm",
+                        "ipo": "IPO",
+                        "identity": "Identity",
+                        "identity-theft": "Identity theft",
+                        "in-depth": "In Depth",
+                        "innovation": "Innovation",
+                        "insurance": "Insurance",
+                        "intelligence-of-things": "Intelligence of Things",
+                        "international": "International",
+                        "internet-of-things": "Internet of Things",
+                        "investment-tracker": "Investments",
+                        "january": "January",
+                        "karen-webster": "Karen Webster",
+                        "latin-america": "Latin America",
+                        "legal": "Legal",
+                        "loans": "Loans",
+                        "loyalty-and-rewards-news": "Loyalty &amp; Rewards",
+                        "mpos-tracker": "MPOS Tracker",
+                        "market-conditions": "Market Conditions",
+                        "marketplace-lending-platform": "Marketplace Lending Platform",
+                        "markets": "Markets",
+                        "mastercard": "Mastercard",
+                        "matchmakers": "Matchmakers",
+                        "media-center": "Media Center",
+                        "mena": "Mena",
+                        "merchant-innovation": "Merchant Innovation",
+                        "meta": "Meta",
+                        "metaverse": "Metaverse",
+                        "mobile": "Mobile",
+                        "mobile-applications": "Mobile Applications",
+                        "mobile-commerce": "Mobile Commerce",
+                        "mobile-order-ahead": "Mobile Order Ahead",
+                        "mobile-payments": "Mobile Payments",
+                        "mobile-score": "Mobile Score",
+                        "mobile-wallets": "Mobile Wallets",
+                        "monday-meetup": "Monday Meetup",
+                        "money-2020": "Money 20\/20",
+                        "money-mobility": "Money Mobility",
+                        "monitise": "Monitise",
+                        "nfc": "NFC",
+                        "nfts": "NFTs",
+                        "new": "New",
+                        "uncategorized": "News",
+                        "news": "News",
+                        "next-gen-ap-automation": "Next-Gen AP Automation",
+                        "next-gen-debit": "Next-Gen Debit",
+                        "next-gen-payments": "Next-Gen Payments",
+                        "next-gen-sales-tax": "Next-Gen Sales Tax",
+                        "oberthur": "Oberthur Technologies",
+                        "omni-channel-series": "Omnichannel Series",
+                        "omnicommerce": "Omnicommerce",
+                        "opinion": "Opinion",
+                        "order-to-cash": "Order To Cash",
+                        "other-industry-events": "Other Industry Events",
+                        "pos-innovation": "POS Innovation",
+                        "pymnts-11": "PYMNTS 11",
+                        "pymnts-events": "PYMNTS Events",
+                        "pymnts-topic-tbd": "PYMNTS Topic TBD",
+                        "pandenomics": "Pandenomics",
+                        "partnerships": "Partnerships",
+                        "partnerships-acquisitions": "Partnerships \/ Acquisitions",
+                        "payanywhere": "PayAnywhere",
+                        "payment-methods": "Payment Methods",
+                        "payments-as-a-service": "Payments As A Service",
+                        "payments-innovation": "Payments Innovation",
+                        "payments-powering-the-platform-economy": "Payments Powering the Platform Economy",
+                        "payroll": "Payroll",
+                        "personal-finance": "Personal Finance",
+                        "personal-loans": "Personal Loans",
+                        "personnel": "Personnel",
+                        "platform-payments": "Platform Payments",
+                        "playmakers0": "Playmakers",
+                        "podcast-2": "Podcast",
+                        "pymnts-podcasts": "Podcasts",
+                        "point-of-sale": "Point of Sale",
+                        "politics": "Politics",
+                        "post-election": "Post-Election",
+                        "predictive-analytics-series": "Predictive Analytics Series",
+                        "prepaid": "Prepaid",
+                        "prescriptions": "Prescriptions",
+                        "processor-acquisition": "Processor Acquisition",
+                        "pymnts-contributors": "Pymnts Contributors",
+                        "qsr-and-mobile": "QSR &amp; Mobile",
+                        "roam": "ROAM",
+                        "real-time-payments": "Real-Time Payments",
+                        "real-estate": "Real Estate",
+                        "regulation": "Regulation",
+                        "regulation-roundup": "Regulation Roundup",
+                        "regulation-series": "Regulation Series",
+                        "report": "Report",
+                        "restaurant-technology": "ResTech",
+                        "restaurant-roundup": "Restaurant Roundup",
+                        "restaurant-innovation": "Restaurant innovation",
+                        "retail": "Retail",
+                        "ridesharing": "Ridesharing",
+                        "risk-management": "Risk Management",
+                        "smbs": "SMBs",
+                        "spac": "SPAC",
+                        "safety-and-security": "Safety and Security",
+                        "security-and-risk": "Security &amp; Fraud",
+                        "security-series": "Security Series",
+                        "shipping": "Shipping",
+                        "shopping": "Shopping",
+                        "sizzlefizzle": "Sizzle\/Fizzle",
+                        "smarter-payments": "Smarter Payments",
+                        "social-commerce": "Social Commerce",
+                        "south-asia": "South Asia",
+                        "south-east-asia": "South East Asia",
+                        "spend-management": "Spend Management",
+                        "startup-check-in": "Startup Check-In",
+                        "startup-dna": "Startup DNA",
+                        "startup-roundup": "Startup Roundup",
+                        "startups": "Startups",
+                        "statistics": "Statistics",
+                        "stock-index": "Stock Index",
+                        "streaming": "Streaming",
+                        "subscription-commerce": "Subscription Commerce",
+                        "subscriptions": "Subscriptions",
+                        "supply-chain": "Supply Chain",
+                        "tsys": "TSYS",
+                        "taxes": "Taxes",
+                        "tech-center": "Tech Center",
+                        "technology": "Technology",
+                        "the-durbin-amendment-briefing-room": "The Durbin Amendment Briefing Room",
+                        "the_innovation_project": "The Innovation Project",
+                        "the-weekender": "The Weekender",
+                        "today-in-data": "Today In Data",
+                        "trackers": "Tracker Series",
+                        "transportation": "Transportation",
+                        "travel-payments": "Travel Payments",
+                        "unattended-retail": "Unattended Retail",
+                        "unicorn-tracker": "Unicorn Tracker",
+                        "visa": "VISA",
+                        "vantagescore": "VantageScore",
+                        "vantiv": "Vantiv",
+                        "vending-machines": "Vending Machines",
+                        "verifone": "Verifone",
+                        "voice-activation": "Voice Activation",
+                        "walmart": "Walmart",
+                        "whole-paycheck-consumer-spending": "Walmart Amazon whole paycheck",
+                        "warby-of-x": "Warby of X",
+                        "wearables": "Wearables",
+                        "webinar-archives": "Webinar Archives",
+                        "webinars": "Webinars",
+                        "whats-hot-2": "What's Hot",
+                        "whats-trending": "What's Trending",
+                        "whatever-happened-to": "Whatever Happened To...",
+                        "whitepaper": "Whitepaper",
+                        "artificial-intelligence-2": "artificial intelligence",
+                        "call-center-commerce": "call center commerce",
+                        "credit-frictions": "credit frictions",
+                        "credit-union-study": "credit union study",
+                        "credit-union-tracker": "credit union tracker",
+                        "data-enablers": "data enablers",
+                        "ecommerce": "eCommerce",
+                        "emea": "emea",
+                        "financial-apps": "financial apps",
+                        "infographics": "infographics",
+                        "pymnts-profile": "profile",
+                        "self-service-retail": "self service retail",
+                        "uber-of-x": "uber of x",
+                        "weekend-wrap": "weekend wrap",
+                        "weird-commerce": "weird commerce"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_65b94aecb5be6"
+                },
+                {
+                    "key": "field_65cf869826755",
+                    "label": "Tracker Category",
+                    "name": "tracker_category",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65b94b7eb5be9",
+                                "operator": "==",
+                                "value": "tracker"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "": null,
+                        "aml": "AML",
+                        "api": "API",
+                        "accounts-payable": "Accounts Payable",
+                        "accounts-receivable": "Accounts Receivable",
+                        "active-study": "Active Study",
+                        "active-tracker": "Active Tracker",
+                        "artificial-intelligence": "Artificial Intelligence",
+                        "authentication": "Authentication",
+                        "automated-retail": "Automated Retail",
+                        "b2b-payments": "B2B Payments",
+                        "bnpl": "BNPL",
+                        "back-office": "Back-office",
+                        "bank-regulation": "Bank Regulation",
+                        "banking": "Banking",
+                        "blockchain": "Blockchain",
+                        "buy-now-pay-later": "Buy Now Pay Later",
+                        "cfo": "CFO",
+                        "cloud-banking": "Cloud Banking",
+                        "consumer-payments": "Consumer Payments",
+                        "consumer-payments-2": "Consumer Payments",
+                        "credit-unions": "Credit Unions",
+                        "cross-border-payments": "Cross-border Payments",
+                        "cross-border-commerce": "Cross Border Commerce",
+                        "cryptocurrency": "Cryptocurrency",
+                        "digital-first-banking": "Digital-First Banking",
+                        "digital-banking": "Digital Banking",
+                        "digital-identity": "Digital Identity",
+                        "digital-onboarding": "Digital Onboarding",
+                        "digital-payments": "Digital Payments",
+                        "disbursements": "Disbursements",
+                        "faster-payments": "Faster Payments",
+                        "financial-inclusion-3": "Financial Inclusion",
+                        "fraud-prevention": "Fraud Prevention",
+                        "gig-economy": "Gig Economy",
+                        "healthcare": "Healthcare",
+                        "healthcare-financing": "Healthcare Financing",
+                        "identity": "Identity",
+                        "innovation": "Innovation",
+                        "insurance": "Insurance",
+                        "intelligence-of-things": "Intelligence of Things",
+                        "latin-america": "Latin America",
+                        "loans": "Loans",
+                        "loyalty-and-rewards-news": "Loyalty &amp; Rewards",
+                        "mpos-tracker": "MPOS Tracker",
+                        "merchant-innovation": "Merchant Innovation",
+                        "mobile": "Mobile",
+                        "mobile-order-ahead": "Mobile Order Ahead",
+                        "money-mobility": "Money Mobility",
+                        "next-gen-ap-automation": "Next-Gen AP Automation",
+                        "next-gen-debit": "Next-Gen Debit",
+                        "next-gen-payments": "Next-Gen Payments",
+                        "next-gen-sales-tax": "Next-Gen Sales Tax",
+                        "payment-methods": "Payment Methods",
+                        "payments-innovation": "Payments Innovation",
+                        "payments-powering-the-platform-economy": "Payments Powering the Platform Economy",
+                        "real-time-payments": "Real-Time Payments",
+                        "regulation": "Regulation",
+                        "restaurant-innovation": "Restaurant innovation",
+                        "retail": "Retail",
+                        "smbs": "SMBs",
+                        "security-and-risk": "Security &amp; Fraud",
+                        "smarter-payments": "Smarter Payments",
+                        "spend-management": "Spend Management",
+                        "subscription-commerce": "Subscription Commerce",
+                        "technology": "Technology",
+                        "unattended-retail": "Unattended Retail",
+                        "whole-paycheck-consumer-spending": "Walmart Amazon whole paycheck",
+                        "call-center-commerce": "call center commerce",
+                        "ecommerce": "eCommerce"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_65b94aecb5be6"
+                },
+                {
+                    "key": "field_65b94ff5b5bee",
+                    "label": "Number of posts",
+                    "name": "number",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65b94b7eb5be9",
+                                "operator": "!=",
+                                "value": "html"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 4,
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "Posts",
+                    "parent_repeater": "field_65b94aecb5be6"
+                },
+                {
+                    "key": "field_65b95048b5bef",
+                    "label": "Style",
+                    "name": "style",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65b94b7eb5be9",
+                                "operator": "!=",
+                                "value": "html"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Default": "Default",
+                        "Card": "Card",
+                        "Tracker": "Tracker",
+                        "Highlight": "Highlight"
+                    },
+                    "default_value": "Default",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_65b94aecb5be6"
+                },
+                {
+                    "key": "field_65c2a36e2fbfa",
+                    "label": "Custom HTML",
+                    "name": "custom_html",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65b94b7eb5be9",
+                                "operator": "==",
+                                "value": "html"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "text",
+                    "media_upload": 1,
+                    "toolbar": "full",
+                    "delay": 0,
+                    "parent_repeater": "field_65b94aecb5be6"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-customPage.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "subject"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1708102649
+}
