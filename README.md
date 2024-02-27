@@ -12,3 +12,8 @@ Output is santized at the block level. Easily scalable with additional component
 
 Developed for editors to use on the fly when needing to spin up a quick landing page to serve to vistors or for brands
 that want to sponsor a page with curated content.
+
+<h2>LICENSE VERIFICATION PLUGIN</h2>
+Adding this plugin and code in header will add licensing functionality to a WP site. Requires freeware licensing plugin Software Licensing Plugin in order to work fully.  
+
+Adds option page where user can authenticate their theme. If theme is unverified, it kills wordpress instance preventing users for accessing the website.
